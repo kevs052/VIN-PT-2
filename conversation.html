@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meters to Yards</title>
+  <link rel="stylesheet" href="myFormat.css">
+</head>
+<body>
+  <h1>Meters to Yards</h1>
+  <h3>Program By Kevin Samaniego</h3> 
+  <!--This is Program by Kevin Samaniego-->
+  <form>
+    <label for="meters">Meters:</label>
+    <input type="number" id="meters" name="meters"><br><br>
+    <button type="button" onclick="convert()">Convert</button>
+    <button onclick="clearInput()">Clear</button>
+    <br><br>
+    <p id="result"></p>
+  </form>
+
+  <script src="Meters to Yards.js"></script>
+  <script>
+    function convert() {
+      let meters = document.getElementById("meters").value;
+      let yards = metersToYards(meters);
+      document.getElementById("result").innerHTML = `${meters} meters is approximately equal to ${yards} yards`;
+    }
+  </script>
+</body>
+</html>
